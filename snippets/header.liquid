@@ -1,0 +1,7 @@
+<header>
+	<h3>{{ shop.name }}</h3>
+	<!-- Main menu -->
+	{% for link in linklists.main-menu.links -%}
+	  {{ link.title | link_to: link.url }}
+	{%- endfor %}
+</header>

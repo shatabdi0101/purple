@@ -1,0 +1,20 @@
+<h2>{{ page.title }}</h2>
+<div>
+	{{ page.content }}
+	{% form 'contact' %}
+  {{ form.errors | default_errors }}
+
+  <div class="email">
+    <label for="email">Email</label>
+    <input type="email" name="contact[email]" />
+  </div>
+  <div class="message">
+    <label for="message">Message</label>
+    <textarea name="contact[body]" id="message"></textarea>
+  </div>
+
+  <div class="submit">
+    <input type="submit" value="Create" />
+  </div>
+{% endform %}
+</div>
